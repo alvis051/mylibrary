@@ -1,38 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="mylibrary.css">
-  <script src="mylibrary.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <button id="openDialogButton">New Book</button>
+    <h1>My Library</h1>
+    <div id="library"></div>
+    <button id="newBookButton">NEW BOOK</button>
 
-  <div id="dialog" class="dialog">
-    <form action="">
-      <div class="dialog-content">
-        <span class="close-button" id="closeDialogButton">&times;</span>
-        <h2>Add a new book</h2>
-        <div class="all_input">
-          <div class="input_space">
-            <label for="name">Name</label>
-            <input type="text" id="bookNameInput" required>
-          </div>
-          <div class="input_space">
-            <label for="author">Author</label>
-            <input type="text" id="bookAuthorInput" required>
-          </div>
-          <button id="submitNewBookButton">Submit</button>
-        </div>
-      </div>
-    </form>
-  </div>
+    <dialog id="bookFormDialog">
+        <form id="bookForm">
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" required>
+            <label for="author">Author:</label>
+            <input type="text" id="author" name="author" required>
+            <label for="pages">Pages:</label>
+            <input type="number" id="pages" name="pages" required>
+            <label for="read">Read:</label>
+            <input type="checkbox" id="read" name="read">
+            <button type="submit">Add Book</button>
+        </form>
+    </dialog>
 
-  <ul id="bookList"></ul>
+    <script src="script.js"></script>
 </body>
-
 </html>
